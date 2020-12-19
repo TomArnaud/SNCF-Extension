@@ -1,3 +1,4 @@
+<!-- By Tom Arnaud https://github.com/TomArnaud/SNCF-Extension-Simple -->
 <!DOCTYPE html>
 <html>
 	<head>
@@ -58,11 +59,13 @@
 		<meta charset="utf-8">
 	</head>
 	<body style="min-width:450px;height: 100%; overflow: hidden visible;">
+		<!-- Remove max-height for use in a web page -->
 		<div style="overflow-y: scroll; scrollbar-width: thin; max-height: 600px;"> 
 			<div class="row text-center m-0">
 				<div class="col-5 p-2">
 					<h1>Départ</h1>
 					<select id="start" class="form-control">
+						<!-- Station ids can be found with the Navitia playground : http://canaltp.github.io/navitia-playground/play.html?request=https%3A%2F%2Fapi.sncf.com%2Fv1%2Fcoverage%2Fsncf%2Fjourneys%3Ffrom%3D%26to%3D%26   Token : 76291488-6a8c-4b22-899b-f9e7e1872814 -->
 						<option value="OCE:SA:87184002">Belfort</option>
 						<option value="OCE:SA:87700146">Danjoutin</option>
 						<option value="OCE:SA:87300822">Meroux-Moval</option>
