@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="bootstrap.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style type="text/css">
+			@keyframes lds-rolling {
+				0% {
+					-webkit-transform: translate(-50%, -50%) rotate(0deg);
+					transform: translate(-50%, -50%) rotate(0deg);
+				}
+				100% {
+					-webkit-transform: translate(-50%, -50%) rotate(360deg);
+					transform: translate(-50%, -50%) rotate(360deg);
+				}
+			}
+			@-webkit-keyframes lds-rolling {
+				0% {
+					-webkit-transform: translate(-50%, -50%) rotate(0deg);
+					transform: translate(-50%, -50%) rotate(0deg);
+				}
+				100% {
+					-webkit-transform: translate(-50%, -50%) rotate(360deg);
+					transform: translate(-50%, -50%) rotate(360deg);
+				}
+			}
+			.lds-rolling {
+				position: relative;
+			}
+			.lds-rolling div,
+			.lds-rolling div:after {
+				position: absolute;
+				width: 160px;
+				height: 160px;
+				border: 20px solid #3b3b3b;
+				border-top-color: transparent;
+				border-radius: 50%;
+			}
+			.lds-rolling div {
+				-webkit-animation: lds-rolling 1s linear infinite;
+				animation: lds-rolling 1s linear infinite;
+				top: 100px;
+				left: 100px;
+			}
+			.lds-rolling div:after {
+				-webkit-transform: rotate(90deg);
+				transform: rotate(90deg);
+			}
+			.lds-rolling {
+				width: 150px !important;
+				height: 150px !important;
+				-webkit-transform: translate(-75px, -75px) scale(0.75) translate(75px, 75px);
+				transform: translate(-75px, -75px) scale(0.75) translate(75px, 75px);
+			}
+		</style>
+		<link rel="icon" type="image/png" href="icons/logo.png" />
+		<title>Belfort-Delle TER</title>
+		<meta charset="utf-8">
+	</head>
+	<body style="min-width:450px;height: 100%; overflow: hidden visible;">
+		<div style="overflow-y: scroll; scrollbar-width: thin; max-height: 600px;"> 
+			<div class="row text-center m-0">
+				<div class="col-5 p-2">
+					<h1>Départ</h1>
+					<select id="start" class="form-control">
+						<option value="OCE:SA:87184002">Belfort</option>
+						<option value="OCE:SA:87700146">Danjoutin</option>
+						<option value="OCE:SA:87300822">Meroux-Moval</option>
+						<option value="OCE:SA:87184424">Morvillars</option>
+						<option value="OCE:SA:87184432">Grandvillars</option>
+						<option value="OCE:SA:87700153">Joncherey</option>
+						<option value="OCE:SA:87184440">Delle</option>
+					</select>
+				</div>
+				<div class="col-2">
+					<button class="btn btn-light" id="swap" style="position: absolute;bottom: 6px;left: 50%;margin-left: -25.5px;"><img src="icons/arrows.svg" style="width: 25px"></button>
+				</div>
+				<div class="col-5 p-2">
+					<h1>Arriver</h1>
+					<select id="end" class="form-control">
+						<option value="OCE:SA:87184002">Belfort</option>
+						<option value="OCE:SA:87700146">Danjoutin</option>
+						<option value="OCE:SA:87300822">Meroux-Moval</option>
+						<option value="OCE:SA:87184424">Morvillars</option>
+						<option value="OCE:SA:87184432">Grandvillars</option>
+						<option value="OCE:SA:87700153">Joncherey</option>
+						<option value="OCE:SA:87184440">Delle</option>
+					</select>
+				</div>
+			</div>
+			<button class="btn btn-success d-block mx-auto mt-5 mb-5 text-uppercase" id="send" style="font-weight: 600" >Rechercher</button>
+			<div class="lds-css ng-scope " id="rolling" style="display: none !important;">
+				<div style="width:100%;height:100%" class="lds-rolling text-center mx-auto d-block">
+					<div></div>
+				</div>
+			</div>
+			<p id="error" class="text-center text-danger mt-5 mb-5" style="display: none !important"><b>Vous ne pouvez pas sélectionner la même gare !</b></p>
+			<table class="table table-striped text-center mb-0" id="table" style="display: none !important;">
+			    <thead class="thead-dark">
+			        <tr>
+			            <th>Date</th>
+			            <th>Départ</th>
+			            <th></th>
+			            <th>Arriver</th>
+			            <th>Durée</th>
+			        </tr>
+			    </thead>
+			    <tbody id="tbody">
+			    </tbody>
+			</table>
+		</div>
+		<script src="jquery.js"></script>
+		<script src="bootstrap.min.js"></script>
+		<script src="scrpit.js"></script>
+	</body>
+</html>

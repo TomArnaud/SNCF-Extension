@@ -1,0 +1,23 @@
+{
+
+  "manifest_version": 2,
+  "name": "Belfort-Delle TER",
+  "version": "1.0",
+
+  "description": "Recherchez et trouvez les horaires TER sur la ligne Belfort-Delle",
+
+  "icons": {
+    "100": "icons/logo.png"
+  },
+
+  "browser_action" : {
+    "default_icon": "icons/logo.png",
+    "default_title": "Belfort-Delle TER",
+    "default_popup": "index.html"
+  },
+
+  "permissions": [
+    "webRequest",
+    "<all_urls>"
+  ]
+}
