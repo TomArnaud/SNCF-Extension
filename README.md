@@ -1,10 +1,10 @@
-#SNCF-Extension-Simple 
+# SNCF-Extension-Simple 
 ========
 Extension pour navigateur permettant de trouver plus facilement les horaires des trains sur une ligne spécifique
 
 ![Alt text](icons/Screenshots-1.png?raw=true "Capture d'écran de l'extension")
 
-Cette Extension utilise les données fournies par [l'API de la SNCF](https://www.digital.sncf.com/startup/api)
+Cette Extension utilise les données théoriques fournies par [l'API de la SNCF](https://www.digital.sncf.com/startup/api)
 
 Elle a été développer pour être utilisé sur la ligne Belfort-Delle-Bienne mais elle peut facilement être adaptée pour une autre ligne.
 Pour cela, vous devez simplement modifier les options des menus déroulant dans le fichier `index.html`.
